@@ -1,5 +1,7 @@
 # terraform-restapi-grafana-datasources-cfg
 
+![](https://github.com/stefanponik/terraform-influxdb-databases-cfg/workflows/InfluxDB-Module/badge.svg)
+
 Module provide programmatic and state aware way to manage grafana datastore configuration using restapi provider. 
 
 RestAPI provider is 3th party for more info visit: https://github.com/Mastercard/terraform-provider-restapi

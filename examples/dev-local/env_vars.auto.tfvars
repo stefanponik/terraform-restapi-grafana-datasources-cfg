@@ -2,9 +2,9 @@
 # ENV Variables
 ###############
 
-grf_url      = "http://localhost:3000"
+grf_url      = "http://grafana:3000"
 grf_user     = "admin"
-grf_password = "Password1"
+grf_password = "admin"
 
 
 

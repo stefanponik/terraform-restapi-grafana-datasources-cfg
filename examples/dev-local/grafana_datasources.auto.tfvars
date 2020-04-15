@@ -28,7 +28,7 @@ datasources = [
   {
     name      = "elk-dev",
     type      = "elasticsearch",
-    url       = "http://localhost:9200",
+    url       = "http://elk-dev-local:9200",
     database  = "logstash*",
     isDefault = false,
     jsonData = {
