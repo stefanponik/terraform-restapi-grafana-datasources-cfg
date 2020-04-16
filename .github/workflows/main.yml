@@ -7,7 +7,7 @@ name: Restapi-grafana-datasources
 on:
   push:
     branches: 
-      - master
+      - ci-testing
     tags: 
       - v0.*.*
     
