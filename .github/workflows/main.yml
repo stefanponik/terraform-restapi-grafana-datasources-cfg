@@ -55,7 +55,7 @@ jobs:
         chmod +x terraform-provider-restapi_v${terrafrom_provider_restapi_version}
 
     - name: Check Plugin
-      run: ls -la ${GITHUB_WORKSPACE}/${tf_working_dir}/.terraform/plugins/linux_amd64/
+      run: ls -la ${GITHUB_WORKSPACE}/${tf_working_dir}/terraform.d/plugins/linux_amd64/
    
     - name: 'Terraform Format'
       uses: hashicorp/terraform-github-actions@master
