@@ -48,9 +48,11 @@ jobs:
 
     - name: Get 3th party plugin ready
       run: | 
-        mkdir -p ${GITHUB_WORKSPACE}/${tf_working_dir}/.terraform/plugins/linux_amd64/
-        cd ${GITHUB_WORKSPACE}/${tf_working_dir}/.terraform/plugins/linux_amd64/
+        mkdir -p ${GITHUB_WORKSPACE}/${tf_working_dir}/terraform.d/plugins/linux_amd64/
+        cd ${GITHUB_WORKSPACE}/${tf_working_dir}/terraform.d/plugins/linux_amd64/
         curl -O https://github.com/Mastercard/terraform-provider-restapi/releases/download/v${terrafrom_provider_restapi_version}/terraform-provider-restapi_v${terrafrom_provider_restapi_version}-linux-amd64
+        mv terraform-provider-restapi_v${terrafrom_provider_restapi_version}-linux-amd64 terraform-provider-restapi_v${terrafrom_provider_restapi_version}
+        chmod +x terraform-provider-restapi_v${terrafrom_provider_restapi_version}
 
     - name: Check Plugin
       run: ls -la ${GITHUB_WORKSPACE}/${tf_working_dir}/.terraform/plugins/linux_amd64/
