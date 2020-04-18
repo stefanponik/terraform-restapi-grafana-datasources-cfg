@@ -51,8 +51,7 @@ jobs:
         mkdir -p ${GITHUB_WORKSPACE}/${tf_working_dir}/terraform.d/plugins/linux_amd64/
         cd ${GITHUB_WORKSPACE}/${tf_working_dir}/terraform.d/plugins/linux_amd64/
         curl -O https://github.com/Mastercard/terraform-provider-restapi/releases/download/v${terrafrom_provider_restapi_version}/terraform-provider-restapi_v${terrafrom_provider_restapi_version}-linux-amd64
-        mv terraform-provider-restapi_v${terrafrom_provider_restapi_version}-linux-amd64 terraform-provider-restapi_v${terrafrom_provider_restapi_version}
-        chmod +x terraform-provider-restapi_v${terrafrom_provider_restapi_version}
+        chmod 744 terraform-provider-restapi_v${terrafrom_provider_restapi_version}-linux-amd64
 
     - name: Check Plugin
       run: ls -la ${GITHUB_WORKSPACE}/${tf_working_dir}/terraform.d/plugins/linux_amd64/
