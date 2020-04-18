@@ -42,12 +42,14 @@ jobs:
     - uses: actions/checkout@v2
     - name: Get 3th party plugin ready
       run: | 
-        mkdir -p ${GITHUB_WORKSPACE}/${tf_working_dir}/.terraform/plugins/linux_amd64/
-        cd ${GITHUB_WORKSPACE}/${tf_working_dir}/.terraform/plugins/linux_amd64/
+        mkdir -p ${GITHUB_WORKSPACE}/terraform-restapi-grafana-datasources/${tf_working_dir}/.terraform/plugins/linux_amd64/
+        cd ${GITHUB_WORKSPACE}/terraform-restapi-grafana-datasources/${tf_working_dir}/.terraform/plugins/linux_amd64/
         curl -L https://github.com/Mastercard/terraform-provider-restapi/releases/download/v${terrafrom_provider_restapi_version}/terraform-provider-restapi_v${terrafrom_provider_restapi_version}-linux-amd64
 
     - name: Check Plugin
-      run: ls -la ${GITHUB_WORKSPACE}/${tf_working_dir}/.terraform/plugins/linux_amd64/
+      run: |
+        ls -la ${GITHUB_WORKSPACE}
+        ls -la ${GITHUB_WORKSPACE}/terraform-restapi-grafana-datasources/${tf_working_dir}/.terraform/plugins/linux_amd64/
 
     - name: 'Terraform Format'
       uses: hashicorp/terraform-github-actions@master
